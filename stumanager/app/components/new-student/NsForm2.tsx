@@ -20,30 +20,6 @@ function NsForm2() {
         />
       </div>
       <div className="form-control w-full max-w-xs">
-        {/* <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Line-2</strong>
-          </span>
-        </label> */}
-        <input
-          type="text"
-          placeholder="Line-2"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
-      <div className="form-control w-full max-w-xs">
-        {/* <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Line-3</strong>
-          </span>
-        </label> */}
-        <input
-          type="text"
-          placeholder="Line-3"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
-      <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
             <strong>City</strong>
@@ -51,7 +27,7 @@ function NsForm2() {
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="Chd/Pkl/Moh/Others"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
@@ -70,7 +46,7 @@ function NsForm2() {
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>Counrtry</strong>
+            <strong>Country</strong>
           </span>
         </label>
         <input
@@ -99,8 +75,12 @@ function NsForm2() {
           margin: "20px 0",
         }}
       >
-        <button className="btn btn-active btn-warning hover:bg-yellow-600">Previous</button>
-        <button className="btn btn-active btn-success hover:bg-green-600">Next</button>
+        <button className="btn btn-active btn-warning hover:bg-yellow-600">
+          Previous
+        </button>
+        <button className="btn btn-active btn-success hover:bg-green-600">
+          Next
+        </button>
       </div>
     </>
   );

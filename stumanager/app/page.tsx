@@ -19,7 +19,7 @@ const Home = async () => {
 
       <Container>
         <div >
-          hello
+          {/* hello */}
         </div>
       </Container>
     

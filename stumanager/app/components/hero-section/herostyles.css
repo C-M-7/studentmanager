@@ -229,8 +229,9 @@
   top: 5px;
   /* transform: rotate(90.5deg); */
   width: 450px;
-  color: #000000;
+  color: white;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 /* .hero .text-wrapper-2 {
@@ -273,7 +274,8 @@
     height: 210px;
     left: 400px;
     position: absolute;
-    color: black;
+    color: white;
+    font-weight: bold;
     top: 5px;
     width: 450px;
     font-size: 2rem;

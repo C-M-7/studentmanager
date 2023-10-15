@@ -22,12 +22,12 @@ function NsForm5() {
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>Programme</strong>
+            <strong>Degree</strong>
           </span>
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="BTech/Mtech/PhD"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
@@ -39,7 +39,7 @@ function NsForm5() {
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="2021-2025"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>

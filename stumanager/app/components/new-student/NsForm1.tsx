@@ -1,5 +1,8 @@
-import React from "react";
+// import { Listbox } from "@headlessui/react";
+"use client"
+import React, { useState } from "react";
 // import "globals.css"
+// import GenderListbox from "../listboxes/GenderListbox"
 
 function NsForm1() {
   return (
@@ -27,19 +30,7 @@ function NsForm1() {
         </label>
         <input
           type="text"
-          placeholder="Type here"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
-      <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Date Of Birth</strong>
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="DD/MM/YYYY"
+          placeholder="Male/Female/Others"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
@@ -63,8 +54,12 @@ function NsForm1() {
           margin: "20px 0",
         }}
       >
-        <button className="btn btn-active btn-warning hover:bg-yellow-600">Previous</button>
-        <button className="btn btn-active btn-success hover:bg-green-600">Next</button>
+        <button className="btn btn-active btn-warning hover:bg-yellow-600">
+          Previous
+        </button>
+        <button className="btn btn-active btn-success hover:bg-green-600">
+          Next
+        </button>
       </div>
     </>
   );

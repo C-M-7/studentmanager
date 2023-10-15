@@ -15,7 +15,7 @@ function NsForm7() {
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="Gen/SC/ST/OBC"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>

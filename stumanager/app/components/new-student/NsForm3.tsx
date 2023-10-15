@@ -4,7 +4,7 @@ import React from "react";
 function NsForm3() {
   return (
     <>
-      <h1 style={{ color: "black", fontSize: "2rem", fontWeight: "bold" }}>
+      <h1 style={{ color: "black", fontSize: "2rem", fontWeight: "bold"}}>
         Contact Details
       </h1>
       <div className="form-control w-full max-w-xs">
