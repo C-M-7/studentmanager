@@ -13,7 +13,7 @@ function NsForm1({ data }: { data: Ns1type }) {
   const handleClick = ()=>{
     // change data in backend
   
-    router.replace(`?step=2`)
+    router.push(`/register?step=2`)
   }
   return (
     <>
@@ -70,7 +70,7 @@ function NsForm1({ data }: { data: Ns1type }) {
           margin: "20px 0",
         }}
       >
-        {data.step && <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => { router.replace(`?step=${data.step}`) }}>
+        {data.step && <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => { router.push(`/register?step=${data.step}`) }}>
           Continue
         </button>}
         <button className="btn btn-active btn-success hover:bg-green-600" onClick={handleClick}>

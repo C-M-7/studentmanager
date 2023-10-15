@@ -44,7 +44,7 @@ const HomeForm = ({ data }: { data: FormType }) => {
     if (data.step) {
         formData.step = data.step + 1
     }
-    let form = (<NsForm1 data={formData} />)
+    let form = (<NsForm1 data={{age:data.age, gender: data.gender,name:data.name,step:data.step}} />)
     switch (step) {
         case '2':
             form = <NsForm2 />
@@ -74,7 +74,7 @@ const HomeForm = ({ data }: { data: FormType }) => {
     return (
 
         <Container>
-            <div onLoad={() => { router.push(`?step=${step}`) }} className='bg-white pt-20' style={{ display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', height: "120vh", gap: '30px' }}>
+            <div onLoad={() => { router.push(`/register?step=${step}`) }} className='bg-white pt-20' style={{ display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', height: "120vh", gap: '30px' }}>
                 {form}
             </div>
         </Container>

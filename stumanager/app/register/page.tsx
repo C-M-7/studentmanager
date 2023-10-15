@@ -16,7 +16,8 @@ const data = {
     "sgpa": 8.1,
     "hostel": "Himalaya",
     "prof": "Technical",
-    "scholar": "none"
+    "scholar": "none",
+    age: 18
 }
 
 const Register = ()=>{

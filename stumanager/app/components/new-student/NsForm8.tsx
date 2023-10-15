@@ -65,7 +65,7 @@ function NsForm8() {
           margin: "20px 0",
         }}
       >
-        <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={()=>{router.replace('?step=7')}}>
+        <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={()=>{router.push('/register?step=7')}}>
           Previous
         </button>
         <button className="btn btn-active btn-primary hover:bg-purple-700">
