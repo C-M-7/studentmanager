@@ -1,6 +1,6 @@
 import Container from "@/app/components/Container";
 import getCurrentUser from "@/app/actions/getCurrentUser";
-import ClientOnly from "./components/ClientOnly";
+
 
 
 
@@ -9,20 +9,20 @@ const Home = async () => {
 
   if (currentUser) {
     return (
-      <ClientOnly>
-        <div></div>
-      </ClientOnly>
+      
+        <div>Hello</div>
+      
     );
   }
 
   return (
-    <ClientOnly>
+
       <Container>
         <div >
-          
+          hello
         </div>
       </Container>
-    </ClientOnly>
+    
   )
 }
 
