@@ -9,18 +9,7 @@ function NsForm5() {
       <h1 style={{ color: "black", fontSize: "2rem", fontWeight: "bold" }}>
         Admission Details
       </h1>
-      <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Student ID</strong>
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
+      
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>

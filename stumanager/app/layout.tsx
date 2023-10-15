@@ -1,6 +1,6 @@
 
 import { Nunito } from 'next/font/google'
-
+// import NsForm0 from './components/new-student/NsForm0';
 // import NsForm2 from './components/new-student/NsForm2';
 // import NsForm3 from './components/new-student/NsForm3';
 // import NsForm4 from './components/new-student/NsForm4';
@@ -42,6 +42,7 @@ export default async function RootLayout({
         <RegisterModal />
         <Navbar />
         <div className="w-30 bg-white">{children}</div>
+        {/* <NsForm0/> */}
       </body>
     </html>
   );
