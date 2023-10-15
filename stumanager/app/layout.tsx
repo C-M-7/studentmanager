@@ -37,11 +37,11 @@ export default async function RootLayout({
 
         <Navbar />
 
-        <div className="pb-20 pt-28 w-30 bg-white">{children}</div>
-        {/* <Hero/> */}
-        <div className='bg-white' style={{display: "flex",flexDirection : 'column', alignItems:'center', justifyContent:'space-around',height : "100vh", gap:'30px'}}>
+        <div className="w-30 bg-white">{children}</div>
+        <Hero/>
+        {/* <div className='bg-white' style={{display: "flex",flexDirection : 'column', alignItems:'center', justifyContent:'space-around',height : "100vh", gap:'30px'}}>
           <NsForm8 />
-        </div>
+        </div> */}
       </body>
     </html>
   );
