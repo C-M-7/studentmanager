@@ -34,24 +34,24 @@ function NsForm8() {
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>JEE Rank (CRL)</strong>
+            <strong>Club Proficiency</strong>
           </span>
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="Cultural/Tech/Sports"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>Number Of Backlogs (If any)</strong>
+            <strong>Hostel</strong>
           </span>
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="Kuruk/Vindh/Hima/Kalp"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
@@ -66,8 +66,8 @@ function NsForm8() {
         <button className="btn btn-active btn-warning hover:bg-yellow-600">
           Previous
         </button>
-        <button className="btn btn-active btn-success hover:bg-green-600">
-          Next
+        <button className="btn btn-active btn-primary hover:bg-purple-700">
+          Finish
         </button>
       </div>
     </>

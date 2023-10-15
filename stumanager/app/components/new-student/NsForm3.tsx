@@ -19,19 +19,19 @@ function NsForm3() {
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
-      <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Optional Phone Number</strong>
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
-      <div className="form-control w-full max-w-xs">
+        {/* <div className="form-control w-full max-w-xs">
+          <label className="label">
+            <span className="label-text" style={{ color: "black" }}>
+              <strong>Optional Phone Number</strong>
+            </span>
+          </label>
+          <input
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered w-full max-w-xs bg-white"
+          />
+        </div> */}
+      {/* <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
             <strong>Landline Number</strong>
@@ -42,7 +42,7 @@ function NsForm3() {
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
         />
-      </div>
+      </div> */}
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>

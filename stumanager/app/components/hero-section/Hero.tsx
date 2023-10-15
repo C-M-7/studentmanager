@@ -40,12 +40,12 @@ export const Hero = () => {
                 <img className="fill-6" alt="Fill" src="fill-84.svg" />
                 <img className="fill-7" alt="Fill" src="fill-88.svg" />
                 <div className="group">
-                  <div className="div-wrapper">
+                  {/* <div className="div-wrapper">
                     <div className="text-wrapper">Learn More</div>
-                  </div>
+                  </div> */}
                 </div>
-                <div className="welcome-back-diane">WELCOME BACK!</div>
-                <p className="you-have-completed">
+                <div className="welcome-back-diane mb-10" style={{fontSize:'2rem'}}>WELCOME BACK!</div>
+                <p className="you-have-completed my-10" style={{fontSize:'1.5rem'}}>
                   You have completed 60% of your goal this week!
                   <br />
                   start a new goal and improve your result

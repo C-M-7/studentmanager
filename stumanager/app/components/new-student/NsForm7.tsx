@@ -1,5 +1,4 @@
 import React from "react";
-// import "globals.css"
 
 function NsForm7() {
   return (
@@ -22,12 +21,12 @@ function NsForm7() {
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>Family Income</strong>
+            <strong>Scholarship(if applicable)</strong>
           </span>
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="None/Acad/Sports/PWD"
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
@@ -35,7 +34,8 @@ function NsForm7() {
         <label className="label">
           <span
             className="label-text"
-            style={{ color: "black", fontSize: "0.95rem", fontWeight: "bold" }}>
+            style={{ color: "black", fontSize: "0.95rem", fontWeight: "bold" }}
+          >
             Attach your Quota Certificate (If Applicable)
           </span>
         </label>

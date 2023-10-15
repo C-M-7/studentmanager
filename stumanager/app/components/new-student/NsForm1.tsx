@@ -37,7 +37,7 @@ function NsForm1() {
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>Nationality</strong>
+            <strong>Age</strong>
           </span>
         </label>
         <input

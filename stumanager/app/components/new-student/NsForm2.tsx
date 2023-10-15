@@ -7,18 +7,18 @@ function NsForm2() {
       <h1 style={{ color: "black", fontSize: "2rem", fontWeight: "bold" }}>
         Address Details
       </h1>
-      <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Address</strong>
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="Line-1"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
+        {/* <div className="form-control w-full max-w-xs">
+          <label className="label">
+            <span className="label-text" style={{ color: "black" }}>
+              <strong>Address</strong>
+            </span>
+          </label>
+          <input
+            type="text"
+            placeholder="Line-1"
+            className="input input-bordered w-full max-w-xs bg-white"
+          />
+        </div> */}
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
@@ -43,7 +43,7 @@ function NsForm2() {
           className="input input-bordered w-full max-w-xs bg-white"
         />
       </div>
-      <div className="form-control w-full max-w-xs">
+      {/* <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
             <strong>Country</strong>
@@ -54,7 +54,7 @@ function NsForm2() {
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
         />
-      </div>
+      </div> */}
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
