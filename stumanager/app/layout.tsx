@@ -1,7 +1,6 @@
 
 import { Nunito } from 'next/font/google'
 
-import NsForm1 from './components/new-student/NsForm1';
 // import NsForm2 from './components/new-student/NsForm2';
 // import NsForm3 from './components/new-student/NsForm3';
 // import NsForm4 from './components/new-student/NsForm4';
@@ -24,8 +23,8 @@ export const metadata = {
   description: 'Dev',
 }
 
-const font = Nunito({ 
-  subsets: ['latin'], 
+const font = Nunito({
+  subsets: ['latin'],
 });
 
 export default async function RootLayout({
@@ -41,9 +40,7 @@ export default async function RootLayout({
         <ToasterProvider />
         <LoginModal />
         <RegisterModal />
-
         <Navbar />
-
         <div className="w-30 bg-white ">{children}</div>
       </body>
     </html>

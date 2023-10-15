@@ -1,7 +1,9 @@
+import { useRouter } from "next/navigation";
 import React from "react";
 // import "globals.css"
 
 function NsForm3() {
+  const router = useRouter()
   return (
     <>
       <h1 style={{ color: "black", fontSize: "2rem", fontWeight: "bold"}}>
@@ -63,8 +65,8 @@ function NsForm3() {
           margin: "20px 0",
         }}
       >
-        <button className="btn btn-active btn-warning hover:bg-yellow-600">Previous</button>
-        <button className="btn btn-active btn-success hover:bg-green-600">Next</button>
+        <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={()=>{router.replace('?step=2')}}>Previous</button>
+        <button className="btn btn-active btn-success hover:bg-green-600" onClick={()=>{router.replace('?step=4')}}>Next</button>
       </div>
     </>
   );
