@@ -3,9 +3,11 @@
 import React from "react";
 import "./herostyles.css";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 // import { ClientRequest } from "http";
 
 export const Hero = () => {
+  const router = useRouter()
   return (
     <div className="hero">
       <div className="overlap-wrapper">
@@ -73,6 +75,7 @@ export const Hero = () => {
               whileHover={{ scale: 1.1 }}
               onHoverStart={(e) => {}}
               onHoverEnd={(e) => {}}
+              onClick={()=>{router.push('/register')}}
             >
               Register New Student
             </motion.button>

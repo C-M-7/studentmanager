@@ -65,8 +65,8 @@ function NsForm3() {
           margin: "20px 0",
         }}
       >
-        <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={()=>{router.replace('?step=2')}}>Previous</button>
-        <button className="btn btn-active btn-success hover:bg-green-600" onClick={()=>{router.replace('?step=4')}}>Next</button>
+        <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={()=>{router.push('/register?step=2')}}>Previous</button>
+        <button className="btn btn-active btn-success hover:bg-green-600" onClick={()=>{router.push('/register?step=4')}}>Next</button>
       </div>
     </>
   );
