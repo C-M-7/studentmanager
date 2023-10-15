@@ -38,19 +38,19 @@ const HomeForm = ({ data }: { data: FormType }) => {
     let form = (<NsForm1 data={data} />)
     switch (step) {
         case '2':
-            form = <NsForm2 data={data} />
+            form = <NsForm2 />
             break;
         case '3':
-            form = <NsForm3 data={data} />
+            form = <NsForm3 />
             break;
         case '5':
-            form = <NsForm5 data={data} />
+            form = <NsForm5 />
             break;
         case '7':
-            form = <NsForm7 data={data} />
+            form = <NsForm7 />
             break;
         case '8':
-            form = <NsForm8 data={data} />
+            form = <NsForm8 />
             break;
         default:
             break;
