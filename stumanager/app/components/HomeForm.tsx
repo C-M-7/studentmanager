@@ -14,7 +14,7 @@ import { useSearchParams } from "next/navigation";
 const HomeForm = () => {
     const searchParams = useSearchParams();
     const step = String(searchParams?.get('step') ?? '1')
-
+    
     let form = (<NsForm1 />)
     switch (step) {
         case '1':

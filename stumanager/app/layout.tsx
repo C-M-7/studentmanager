@@ -41,7 +41,7 @@ export default async function RootLayout({
         <LoginModal />
         <RegisterModal />
         <Navbar />
-        <div className="w-30 bg-white ">{children}</div>
+        <div className="w-30 bg-white">{children}</div>
       </body>
     </html>
   );
