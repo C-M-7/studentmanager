@@ -45,10 +45,6 @@ export default async function RootLayout({
         <Navbar />
 
         <div className="w-30 bg-white ">{children}</div>
-        {/* <Hero />/ */}
-        <div className='bg-white pt-20' style={{display: "flex",flexDirection : 'column', alignItems:'center', justifyContent:'space-around',height : "120vh", gap:'30px' }}>
-          <NsForm1/>
-        </div>
       </body>
     </html>
   );

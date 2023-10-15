@@ -1,5 +1,7 @@
 import Container from "@/app/components/Container";
 import getCurrentUser from "@/app/actions/getCurrentUser";
+import NsForm1 from "./components/new-student/NsForm1";
+import { Hero } from "./components/hero-section/Hero";
 
 
 
@@ -7,10 +9,12 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 const Home = async () => {
   const currentUser = await getCurrentUser();
 
-  if (currentUser) {
+  if (!currentUser) {
     return (
       
-        <div>Hello</div>
+      <div className="">
+        <Hero />
+      </div>
       
     );
   }
@@ -18,8 +22,8 @@ const Home = async () => {
   return (
 
       <Container>
-        <div >
-          {/* hello */}
+        <div className='bg-white pt-20' style={{display: "flex",flexDirection : 'column', alignItems:'center', justifyContent:'space-around',height : "120vh", gap:'30px' }}>
+          <NsForm1/>
         </div>
       </Container>
     
