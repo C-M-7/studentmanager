@@ -4,7 +4,7 @@ import { Hero } from "./components/hero-section/Hero";
 const Home = async () => {
   const currentUser = await getCurrentUser();
 
-  if (!currentUser) {
+  if (currentUser) {
     return (
 
       <div className="">
@@ -13,7 +13,7 @@ const Home = async () => {
 
     );
   }else{
-    return <></>
+    return <h1 className="pt-36 text-6xl pl-5">Login to Continue.</h1>
   }
   
 }
