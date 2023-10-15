@@ -44,8 +44,16 @@ INSTALLED_APPS = [
     'storages',
     'django.contrib.gis',
     'django_filters',
-    'log.apps.LogConfig'
+    'log.apps.LogConfig',
+    'auditlog'
 ]
+AUDIT_LOG = {
+    # ...
+    'log.Log': {
+        'enabled': True,
+        'methods': ['create', 'update', 'delete'],
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'auditlog.middleware.AuditlogMiddleware'
 ]
 
 ROOT_URLCONF = 'backend.urls'
