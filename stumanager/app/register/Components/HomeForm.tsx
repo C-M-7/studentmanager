@@ -10,7 +10,7 @@ import NsForm7 from "../../components/new-student/NsForm7";
 import NsForm8 from "../../components/new-student/NsForm8";
 import Container from "../../components/Container";
 
-type FormType = {
+export type FormType = {
     "sid"?: number | null,
     "step"?: number | null,
     "name"?: string | null,
@@ -35,16 +35,7 @@ const HomeForm = ({ data }: { data: FormType }) => {
     const router = useRouter()
     const searchParameters = useSearchParams()
     let step = (searchParameters?.get('step') ?? '1')
-    const formData: FormType = {
-        step: null,
-        name: '',
-        gender: '',
-        age: 18
-    }
-    if (data.step) {
-        formData.step = data.step + 1
-    }
-    let form = (<NsForm1 data={{age:data.age, gender: data.gender,name:data.name,step:data.step}} />)
+    let form = (<NsForm1 data={data} />)
     switch (step) {
         case '2':
             form = <NsForm2 />
@@ -52,14 +43,8 @@ const HomeForm = ({ data }: { data: FormType }) => {
         case '3':
             form = <NsForm3 />
             break;
-        case '4':
-            form = <NsForm4 />
-            break;
         case '5':
             form = <NsForm5 />
-            break;
-        case '6':
-            form = <NsForm6 />
             break;
         case '7':
             form = <NsForm7 />

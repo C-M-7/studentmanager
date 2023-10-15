@@ -1,13 +1,9 @@
 "use client"
+import { FormType } from "@/app/register/Components/HomeForm";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-type Ns1type = {
-  step?: number | null
-  name?: string| null
-  gender?: string| null
-  age?: number| null
-}
-function NsForm1({ data }: { data: Ns1type }) {
+
+function NsForm1({ data }: { data: FormType }) {
   const router = useRouter()
   const [form,setForm]=useState({name:data.name,gender:data.gender,age:data.age})
   const handleClick = ()=>{

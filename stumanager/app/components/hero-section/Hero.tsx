@@ -66,6 +66,7 @@ export const Hero = () => {
               whileHover={{ scale: 1.1 }}
               onHoverStart={(e) => {}}
               onHoverEnd={(e) => {}}
+              onClick={()=>{router.push('/audit')}}
             >
               Previous Student Audit
             </motion.button>
