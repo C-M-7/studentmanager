@@ -44,7 +44,7 @@ export const Hero = () => {
                     <div className="text-wrapper">Learn More</div>
                   </div> */}
                 </div>
-                <div className="welcome-back-diane mb-10" style={{fontSize:'2rem'}}>WELCOME BACK!</div>
+                <div className="welcome-back-diane mb-10" style={{fontSize:'2rem', fontFamily:'cursive'}}>WELCOME BACK!</div>
                 <p className="you-have-completed my-10" style={{fontSize:'1.5rem'}}>
                   You have completed 60% of your goal this week!
                   <br />
