@@ -1,15 +1,11 @@
-// import { Listbox } from "@headlessui/react";
 "use client"
 import { useRouter } from "next/navigation";
-import queryString from "query-string";
 import React, { useState } from "react";
-// import "globals.css"
-// import GenderListbox from "../listboxes/GenderListbox"
 type Ns1type = {
-  step: string
-  name: string
-  gender: string
-  age: number
+  step?: number | null
+  name?: string| null
+  gender?: string| null
+  age?: number| null
 }
 function NsForm1({ data }: { data: Ns1type }) {
   const router = useRouter()
@@ -34,7 +30,7 @@ function NsForm1({ data }: { data: Ns1type }) {
           type="text"
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
-          value={form.name}
+          value={form.name??''}
           onChange={e=>{setForm({...form,name:(e.target.value)})}}
         />
       </div>
@@ -48,7 +44,7 @@ function NsForm1({ data }: { data: Ns1type }) {
           type="text"
           placeholder="Male/Female/Others"
           className="input input-bordered w-full max-w-xs bg-white"
-          value={form.gender}
+          value={form.gender??''}
           onChange={e=>{setForm({...form,gender:(e.target.value)})}}
         />
       </div>
@@ -62,7 +58,7 @@ function NsForm1({ data }: { data: Ns1type }) {
           type="text"
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
-          value={form.age}
+          value={form.age??''}
           onChange={e=>{setForm({...form,age:Number(e.target.value)})}}
         />
       </div>
@@ -74,7 +70,7 @@ function NsForm1({ data }: { data: Ns1type }) {
           margin: "20px 0",
         }}
       >
-        {data.step !== '1' && <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => { router.replace(`?step=${data.step}`) }}>
+        {data.step && <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => { router.replace(`?step=${data.step}`) }}>
           Continue
         </button>}
         <button className="btn btn-active btn-success hover:bg-green-600" onClick={handleClick}>
