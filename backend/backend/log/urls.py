@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import LogEntryList
 
 urlpatterns=[
     path('logs/',views.getAllLogs,name='logs'),
@@ -7,5 +8,6 @@ urlpatterns=[
     path('logs/new/',views.newLog,name='new_log'),
     path('logs/<str:pk>/update/',views.updateLog,name='update_log'),
     path('logs/<str:pk>/delete/',views.deleteLog,name='delete_log'),
-    path('audit-logs/<str:Log>/', views.AuditLogEntryList.as_view(), name='audit-log-list'),
+    path('api/log-entries/', LogEntryList.as_view(), name='log-entry-list')
+    
 ]

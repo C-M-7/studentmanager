@@ -53,6 +53,7 @@ class Scholar(models.TextChoices):
 class Log(models.Model):
      sid=models.IntegerField(primary_key=True)
      history = AuditlogHistoryField()
+     age=models.IntegerField(blank=True,null=True)
      step=models.IntegerField(default=0)
      name=models.CharField(max_length=100,blank=True, null=True)
      gender=models.CharField(

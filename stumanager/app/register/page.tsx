@@ -8,6 +8,7 @@ import NsForm3 from "../components/new-student/NsForm3";
 import NsForm5 from "../components/new-student/NsForm5";
 import NsForm7 from "../components/new-student/NsForm7";
 import NsForm8 from "../components/new-student/NsForm8";
+import axios from "axios";
 const data = {
     "sid": null,
     "age": null,
@@ -55,10 +56,11 @@ const Register = () => {
             break;
     }
     const handleSubmit = async (data: any) => {
-
+        const res=await axios("http://127.0.0.1:8000/api/logs/");
+        setData(res.data);
         // get data from backend data.sid using axios
         // setData(data fetched from backend)
-
+        console.log(formData);
         router.push('/register?step=1')
 
     }
