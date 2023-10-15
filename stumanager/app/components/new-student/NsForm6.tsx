@@ -60,7 +60,7 @@ function NsForm6() {
             className="label-text"
             style={{ color: "black", fontSize: "1.1rem" }}
           >
-            Attach your 12th Marksheet
+            Attach your 10th Marksheet
           </span>
         </label>
         <input

@@ -13,7 +13,13 @@ export const Hero = () => {
           <div className="overlap-group">
             <div className="ellipse" />
             <div className="banner">
-              <div className="div">
+              <motion.div
+                className="div"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ease: "easeOut", duration: 0.75 }}
+                whileHover={{ scale: 1.02 }}
+              >
                 <img className="oval" alt="Oval" src="oval.svg" />
                 <img className="fill" alt="Fill" src="fill-42.svg" />
                 <img className="img" alt="Fill" src="fill-57.svg" />
@@ -31,7 +37,7 @@ export const Hero = () => {
                   alt="Fill copy"
                   src="fill-72-copy.svg"
                 />
-                <img className="fill-6" alt="Fill" src="fill-84.svg" /> 
+                <img className="fill-6" alt="Fill" src="fill-84.svg" />
                 <img className="fill-7" alt="Fill" src="fill-88.svg" />
                 <div className="group">
                   <div className="div-wrapper">
@@ -45,15 +51,31 @@ export const Hero = () => {
                   start a new goal and improve your result
                 </p>
                 <img className="artboard" alt="Artboard" src="artboard-7.svg" />
-              </div>
+              </motion.div>
             </div>
             {/* <div className="text-wrapper-2">Previous Student </div> */}
           </div>
           <div className="overlap-2">
             <div className="ellipse-2" />
             {/* <img className="rectangle-2" alt="Rectangle" src="rectangle-15.svg" /> */}
-            <button className="rectangle">Previous Student Audit</button>
-            <button className="rectangle-2">Register New Student</button>
+            <motion.button
+              className="rectangle"
+              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 }}
+              onHoverStart={(e) => {}}
+              onHoverEnd={(e) => {}}
+            >
+              Previous Student Audit
+            </motion.button>
+            <motion.button
+              className="rectangle-2"
+              whileTap={{ scale: 0.8 }}
+              whileHover={{ scale: 1.1 }}
+              onHoverStart={(e) => {}}
+              onHoverEnd={(e) => {}}
+            >
+              Register New Student
+            </motion.button>
             {/* <div className="text-wrapper-3">Register New Student</div> */}
           </div>
         </div>
