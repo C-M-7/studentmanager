@@ -1,3 +1,4 @@
+import NsForm0 from "../components/new-student/NsForm0"
 import HomeForm from "./Components/HomeForm"
 const data = {
     "sid": 30,
@@ -22,7 +23,8 @@ const data = {
 
 const Register = ()=>{
     return (
-        <HomeForm data={data} />
+        <NsForm0 />
+        // <HomeForm data={data} />
     )
 }
 
