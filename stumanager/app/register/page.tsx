@@ -1,29 +1,34 @@
+"use client";
+import { useState } from "react";
 import NsForm0 from "../components/new-student/NsForm0"
 import HomeForm from "./Components/HomeForm"
 const data = {
-    "sid": 30,
-    "step": 6,
-    "name": "Sahil Singh",
-    "gender": "male", 
-    "city": "other",
-    "pincode": 160015,
-    "degree": "Btech",
-    "branch": "EE",
-    "batch": 2024,
-    "email": "sahil@admin.com",
-    "quota": "General",
+    "sid": null,
+    "step": null,
+    "name": null,
+    "gender": null,
+    "city": null,
+    "pincode": null,
+    "degree": null,
+    "branch": null,
+    "batch": null,
+    "email": null,
+    "quota": null,
     "updatetime": null,
-    "cgpa": 8.1,
-    "sgpa": 8.1,
-    "hostel": "Himalaya",
-    "prof": "Technical",
-    "scholar": "none",
-    age: 18
+    "cgpa": null,
+    "sgpa": null,
+    "hostel": null,
+    "prof": null,
+    "scholar": null
 }
 
 const Register = ()=>{
+    const [formData, setData]=useState()
     return (
-        <NsForm0 />
+        <div className='bg-white pt-20' style={{ display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', height: "120vh", gap: '30px' }}>
+                <NsForm0 />
+            </div>
+        
         // <HomeForm data={data} />
     )
 }
