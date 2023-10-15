@@ -1,16 +1,16 @@
 import React from "react";
 // import "globals.css"
 
-function NsForm1() {
+function NsForm7() {
   return (
     <>
       <h1 style={{ color: "black", fontSize: "2rem", fontWeight: "bold" }}>
-        Personal Details
+        Additional Information
       </h1>
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>Full Name</strong>
+            <strong>Quota</strong>
           </span>
         </label>
         <input
@@ -22,7 +22,7 @@ function NsForm1() {
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>Gender</strong>
+            <strong>Family Income</strong>
           </span>
         </label>
         <input
@@ -33,27 +33,13 @@ function NsForm1() {
       </div>
       <div className="form-control w-full max-w-xs">
         <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Date Of Birth</strong>
+          <span
+            className="label-text"
+            style={{ color: "black", fontSize: "0.95rem", fontWeight: "bold" }}>
+            Attach your Quota Certificate (If Applicable)
           </span>
         </label>
-        <input
-          type="text"
-          placeholder="DD/MM/YYYY"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
-      <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Nationality</strong>
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
+        <input type="file" className="file-input w-full max-w-xs bg-gray-100" />
       </div>
       <div
         style={{
@@ -63,11 +49,15 @@ function NsForm1() {
           margin: "20px 0",
         }}
       >
-        <button className="btn btn-active btn-warning hover:bg-yellow-600">Previous</button>
-        <button className="btn btn-active btn-success hover:bg-green-600">Next</button>
+        <button className="btn btn-active btn-warning hover:bg-yellow-600">
+          Previous
+        </button>
+        <button className="btn btn-active btn-success hover:bg-green-600">
+          Next
+        </button>
       </div>
     </>
   );
 }
 
-export default NsForm1;
+export default NsForm7;
