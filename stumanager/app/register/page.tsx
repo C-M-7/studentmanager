@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import NsForm1 from "../components/new-student/NsForm1";
 import NsForm2 from "../components/new-student/NsForm2";
@@ -75,9 +75,11 @@ const Register = () => {
                         </span>
                     </label>
                     <input
-                        type="text"
+                        type="tel"
                         placeholder="Type here"
                         className="input input-bordered w-full max-w-xs bg-white"
+                        value={formData.sid===0?'':String(formData.sid??'')}
+                        onChange={(e)=>{setData({...formData,sid:e.target.value})}}
                     />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-around', margin: '2rem' }}>
