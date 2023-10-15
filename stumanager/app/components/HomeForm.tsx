@@ -10,6 +10,8 @@ import NsForm7 from "./new-student/NsForm7";
 import NsForm8 from "./new-student/NsForm8";
 import Container from "./Container";
 import { useSearchParams } from "next/navigation";
+import exp from "constants";
+import { GetServerSideProps } from "next";
 
 const HomeForm = () => {
     const searchParams = useSearchParams();

@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.validators import MinValueValidator,MaxValueValidator
 # Create your models here.
+from auditlog.registry import auditlog
+from auditlog.models import AuditlogHistoryField
 from datetime import *
 class Gender(models.TextChoices):
     
@@ -50,6 +52,7 @@ class Scholar(models.TextChoices):
      pwd="PWD"
 class Log(models.Model):
      sid=models.IntegerField(primary_key=True)
+     history = AuditlogHistoryField()
      step=models.IntegerField(default=0)
      name=models.CharField(max_length=100,blank=True, null=True)
      gender=models.CharField(
@@ -94,3 +97,4 @@ class Log(models.Model):
           blank=True, null=True,
           
      )
+auditlog.register(Log)
