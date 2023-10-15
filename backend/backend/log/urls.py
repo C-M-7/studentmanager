@@ -6,5 +6,6 @@ urlpatterns=[
     path('logs/<str:pk>',views.getLog,name='log'),
     path('logs/new/',views.newLog,name='new_log'),
     path('logs/<str:pk>/update/',views.updateLog,name='update_log'),
-    path('logs/<str:pk>/delete/',views.deleteLog,name='delete_log')
+    path('logs/<str:pk>/delete/',views.deleteLog,name='delete_log'),
+    path('audit-logs/<str:Log>/', views.AuditLogEntryList.as_view(), name='audit-log-list'),
 ]

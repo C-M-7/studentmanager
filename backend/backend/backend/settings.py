@@ -47,6 +47,13 @@ INSTALLED_APPS = [
     'log.apps.LogConfig',
     'auditlog'
 ]
+AUDIT_LOG = {
+    # ...
+    'log.Log': {
+        'enabled': True,
+        'methods': ['create', 'update', 'delete'],
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

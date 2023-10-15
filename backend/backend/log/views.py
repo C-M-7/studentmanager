@@ -4,7 +4,14 @@ from .serializers import LogSerializer
 from .models import Log
 from rest_framework.response import Response
 from rest_framework import status
-
+from rest_framework import generics
+from auditlog.models import LogEntry
+from .serializers import AuditLogEntrySerializer
+class AuditLogEntryList(generics.ListAPIView):
+    serializer_class = AuditLogEntrySerializer
+    def get_queryset(self):
+        model_name = self.kwargs['Log']
+        return LogEntry.objects.filter(content_type__model=Log)
 # Create your views here.
 @api_view(['GET'])
 def getAllLogs(request):
