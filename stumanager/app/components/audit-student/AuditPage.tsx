@@ -49,8 +49,8 @@ const AuditPage = () => {
           <table className="table table-xs">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>SID</th>
-                <th>Primary Key</th>
                 <th>Changes</th>
                 <th>Timestamp</th>
               </tr>

@@ -70,7 +70,7 @@ function NsForm1({ data, up, st }: { data: FormType, up: Function, st: Function 
         {data.step && <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => {
           router.push(`/register?step=${data.step}`)
         }}>
-          Continue
+          Continue to where you left
         </button>}
         <button className="btn btn-active btn-success hover:bg-green-600" onClick={handleClick}>
           Save & Next
