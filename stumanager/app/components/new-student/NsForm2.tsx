@@ -1,26 +1,20 @@
+import { FormType } from "@/app/register/page";
 import { useRouter } from "next/navigation";
 import React from "react";
-// import "globals.css"
 
-function NsForm2() {
+function NsForm2({ data, up, st }: { data: FormType, up: Function, st: Function }) {
   const router = useRouter()
+  const handleClick = () => {
+    // change data in backend
+
+    st({ ...data, step: 3 })
+    router.push(`/register?step=3`)
+  }
   return (
     <>
       <h1 style={{ color: "black", fontSize: "2rem", fontWeight: "bold" }}>
         Address Details
       </h1>
-        {/* <div className="form-control w-full max-w-xs">
-          <label className="label">
-            <span className="label-text" style={{ color: "black" }}>
-              <strong>Address</strong>
-            </span>
-          </label>
-          <input
-            type="text"
-            placeholder="Line-1"
-            className="input input-bordered w-full max-w-xs bg-white"
-          />
-        </div> */}
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
@@ -29,6 +23,8 @@ function NsForm2() {
         </label>
         <input
           type="text"
+          value={data.city ?? ''}
+          onChange={(e) => { st({ ...data, city: e.target.value }) }}
           placeholder="Chd/Pkl/Moh/Others"
           className="input input-bordered w-full max-w-xs bg-white"
         />
@@ -36,34 +32,12 @@ function NsForm2() {
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text" style={{ color: "black" }}>
-            <strong>State</strong>
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div>
-      {/* <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
-            <strong>Country</strong>
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered w-full max-w-xs bg-white"
-        />
-      </div> */}
-      <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text" style={{ color: "black" }}>
             <strong>Pincode</strong>
           </span>
         </label>
         <input
+          value={data.pincode ?? ''}
+          onChange={(e) => { st({ ...data, pincode: e.target.value }) }}
           type="text"
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
@@ -77,11 +51,11 @@ function NsForm2() {
           margin: "20px 0",
         }}
       >
-        <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={()=>{router.push('/register?step=1')}}>
+        <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => { router.push('/register?step=1') }}>
           Previous
         </button>
-        <button className="btn btn-active btn-success hover:bg-green-600" onClick={()=>{router.push('/register?step=3')}}>
-          Next
+        <button className="btn btn-active btn-success hover:bg-green-600" onClick={handleClick}>
+          Save & Next
         </button>
       </div>
     </>

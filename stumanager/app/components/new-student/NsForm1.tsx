@@ -1,14 +1,14 @@
 "use client"
-import { FormType } from "@/app/register/Components/HomeForm";
+import { FormType } from "@/app/register/page";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-function NsForm1({ data }: { data: FormType }) {
+function NsForm1({ data, up, st }: { data: FormType, up: Function, st: Function }) {
   const router = useRouter()
-  const [form,setForm]=useState({name:data.name,gender:data.gender,age:data.age})
-  const handleClick = ()=>{
+  const handleClick = () => {
     // change data in backend
-  
+
+    st({ ...data, step: 2 })
     router.push(`/register?step=2`)
   }
   return (
@@ -26,8 +26,8 @@ function NsForm1({ data }: { data: FormType }) {
           type="text"
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
-          value={form.name??''}
-          onChange={e=>{setForm({...form,name:(e.target.value)})}}
+          value={data.name ?? ''}
+          onChange={e => { st({ ...data, name: (e.target.value) }) }}
         />
       </div>
       <div className="form-control w-full max-w-xs">
@@ -40,8 +40,8 @@ function NsForm1({ data }: { data: FormType }) {
           type="text"
           placeholder="Male/Female/Others"
           className="input input-bordered w-full max-w-xs bg-white"
-          value={form.gender??''}
-          onChange={e=>{setForm({...form,gender:(e.target.value)})}}
+          value={data.gender ?? ''}
+          onChange={e => { st({ ...data, gender: (e.target.value) }) }}
         />
       </div>
       <div className="form-control w-full max-w-xs">
@@ -54,8 +54,8 @@ function NsForm1({ data }: { data: FormType }) {
           type="text"
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
-          value={form.age??''}
-          onChange={e=>{setForm({...form,age:Number(e.target.value)})}}
+          value={data.age ?? ''}
+          onChange={e => { st({ ...data, age: Number(e.target.value) }) }}
         />
       </div>
       <div
@@ -66,7 +66,9 @@ function NsForm1({ data }: { data: FormType }) {
           margin: "20px 0",
         }}
       >
-        {data.step && <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => { router.push(`/register?step=${data.step}`) }}>
+        {data.step && <button className="btn btn-active btn-warning hover:bg-yellow-600" onClick={() => {
+          router.push(`/register?step=${data.step}`)
+        }}>
           Continue
         </button>}
         <button className="btn btn-active btn-success hover:bg-green-600" onClick={handleClick}>
