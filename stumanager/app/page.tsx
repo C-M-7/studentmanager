@@ -4,7 +4,7 @@ import { Hero } from "./components/hero-section/Hero";
 const Home = async () => {
   const currentUser = await getCurrentUser();
 
-  if (currentUser) {
+  if (!currentUser) {
     return (
 
       <div className="">
