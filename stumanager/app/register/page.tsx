@@ -81,31 +81,8 @@ const Register = () => {
             break;
     }
     const handleSubmit = async (data: any) => {
-        // const res=await axios("http://127.0.0.1:8000/api/logs/");
-        // setData(res.data);
-        // get data from backend data.sid using axios
-        // setData(data fetched from backend)
-        setData({
-            "sid": 30,
-            "age": null,
-            "step": 5,
-            "name": "Sahil Singh",
-            "gender": "male",
-            "city": "other",
-            "pincode": 160015,
-            "degree": "Btech",
-            "branch": "EE",
-            "batch": 2024,
-            "email": "sahil@admin.com",
-            "quota": "General",
-            "updatetime": null,
-            "cgpa": 8.1,
-            "sgpa": 8.1,
-            "hostel": "Himalaya",
-            "prof": null,
-            "scholar": "none"
-        })
-        console.log(formData);
+        const res=await axios(`http://127.0.0.1:8000/api/logs/${data.sid}`);
+        setData(res.data);
         router.push('/register?step=1')
 
     }
