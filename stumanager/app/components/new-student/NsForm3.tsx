@@ -6,6 +6,7 @@ function NsForm3({ data, up, st }: { data: FormType, up: Function, st: Function 
   const router = useRouter()
   const handleClick = () => {
     // change data in backend
+    up(data)
 
     st({ ...data, step: 4 })
     router.push(`/register?step=4`)

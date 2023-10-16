@@ -19,7 +19,7 @@ import './globals.css'
 import getCurrentUser from './actions/getCurrentUser';
 
 export const metadata = {
-  title: 'Project',
+  title: 'StuManager',
   description: 'Dev',
 }
 

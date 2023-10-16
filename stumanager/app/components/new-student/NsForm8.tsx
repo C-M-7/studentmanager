@@ -7,6 +7,7 @@ function NsForm8({ data, up, st }: { data: FormType, up: Function, st: Function 
   const router = useRouter()
   const handleClick = () => {
     // change data in backend
+    up(data)
   }
   return (
     <>

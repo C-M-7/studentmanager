@@ -6,9 +6,10 @@ import React, { useState } from "react";
 function NsForm1({ data, up, st }: { data: FormType, up: Function, st: Function }) {
   const router = useRouter()
   const handleClick = () => {
-    // change data in backend
-
+    up(data)
     st({ ...data, step: 2 })
+    
+
     router.push(`/register?step=2`)
   }
   return (
@@ -54,7 +55,7 @@ function NsForm1({ data, up, st }: { data: FormType, up: Function, st: Function 
           type="text"
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs bg-white"
-          value={data.age ?? ''}
+          value={String(data.age ?? '')}
           onChange={e => { st({ ...data, age: Number(e.target.value) }) }}
         />
       </div>

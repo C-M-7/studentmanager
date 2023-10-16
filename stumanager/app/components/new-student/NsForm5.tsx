@@ -6,7 +6,7 @@ import React from "react";
 function NsForm5({ data, up, st }: { data: FormType, up: Function, st: Function }) {
   const router = useRouter()
   const handleClick = () => {
-    // change data in backend
+    up(data)
 
     st({ ...data, step: 5 })
     router.push(`/register?step=5`)

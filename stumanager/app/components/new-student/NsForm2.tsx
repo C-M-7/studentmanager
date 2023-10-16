@@ -5,7 +5,7 @@ import React from "react";
 function NsForm2({ data, up, st }: { data: FormType, up: Function, st: Function }) {
   const router = useRouter()
   const handleClick = () => {
-    // change data in backend
+    up(data)
 
     st({ ...data, step: 3 })
     router.push(`/register?step=3`)
@@ -36,7 +36,7 @@ function NsForm2({ data, up, st }: { data: FormType, up: Function, st: Function 
           </span>
         </label>
         <input
-          value={data.pincode ?? ''}
+          value={String(data.pincode ?? '')}
           onChange={(e) => { st({ ...data, pincode: e.target.value }) }}
           type="text"
           placeholder="Type here"

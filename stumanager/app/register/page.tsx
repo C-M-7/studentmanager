@@ -31,24 +31,24 @@ const data = {
     "scholar": null
 }
 export type FormType = {
-    "sid": number | null,
-    "step": number | null,
+    "sid": Number | null,
+    "step": Number | null,
     "name": string | null,
     "gender": string | null,
     "city": string | null,
-    "pincode": number | null,
+    "pincode": Number | null,
     "degree": string | null,
     "branch": string | null,
-    "batch": number | null,
+    "batch": Number | null,
     "email": string | null,
     "quota": string | null,
     "updatetime": Date | null,
-    "cgpa": number | null,
-    "sgpa": number | null,
+    "cgpa": Number | null,
+    "sgpa": Number | null,
     "hostel": string | null,
     "prof": string | null,
     "scholar": string | null
-    age: number | null
+    "age" : Number | null
 }
 
 const Register = () => {
@@ -57,7 +57,9 @@ const Register = () => {
     const searchParameters = useSearchParams()
     let step = (searchParameters?.get('step') ?? '0')
     const updateData = async (data:any)=>{
-        // update data in axios
+        const res=await axios.put(`http://127.0.0.1:8000/api/logs/${data.sid}/update/`,{...data});
+        console.log(res)
+        
     }
     let form = (<NsForm1 data={formData} up={updateData} st={setData} />)
     switch (step) {
@@ -81,8 +83,14 @@ const Register = () => {
             break;
     }
     const handleSubmit = async (data: any) => {
-        const res=await axios(`http://127.0.0.1:8000/api/logs/${data.sid}`);
-        setData(res.data);
+        try{
+            const res=await axios.get(`http://127.0.0.1:8000/api/logs/${data.sid}`);
+            setData(res.data);
+            console.log(res.data)
+        }catch{
+            const res=await axios.post('http://127.0.0.1:8000/api/logs/new/',{sid:data.sid, step:1});
+            setData({...data,sid:data.sid})
+        }
         router.push('/register?step=1')
 
     }
