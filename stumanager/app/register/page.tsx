@@ -87,6 +87,14 @@ const Register = () => {
             const res=await axios.get(`http://127.0.0.1:8000/api/logs/${data.sid}`);
             setData(res.data);
             console.log(res.data)
+            const res2= await axios.get('http://localhost:8000/api/api/log-entries/?format=json')
+            const fn:any =[]
+            res2.data.map((item:any)=>{
+                
+                    fn.push({id:item.id,changes:JSON.parse(item.changes),timestamp:item.timestamp,object_pk:item.object_pk})
+                
+            })
+            console.log(fn)
         }catch{
             const res=await axios.post('http://127.0.0.1:8000/api/logs/new/',{sid:data.sid, step:1});
             setData({...data,sid:data.sid})

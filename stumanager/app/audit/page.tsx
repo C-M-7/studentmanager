@@ -1,8 +1,10 @@
 import AuditPage from "../components/audit-student/AuditPage"
 
-const Register = ()=>{
+const Register = async ()=>{
     return(
-        <AuditPage />
+        <div className="pt-32 px-10">
+            <AuditPage />
+        </div>
     )
 }
 
